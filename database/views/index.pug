@@ -1,0 +1,77 @@
+doctype html 
+
+html 
+    head
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous")
+        title Login
+    body 
+        h1 Login 
+        form(id='form-login')
+            div(class='form-group')
+                label Email:
+                input(type="text", name="email", class="form-control", placeholder="Email" value="" id="email")
+            div(class="form-group")
+                label Password:
+                input(type="text", name="password", class="form-control", placeholder="Password" value="" id="password")    
+            div
+                input(type="submit", value="Submit" id="submitter").btn.btn-primary
+
+script.
+
+    const formLogin = document.querySelector('#form-login')
+    const submitter = document.querySelector('#submitter')
+
+
+    submitter.addEventListener('click', myRequest)
+
+    function myRequest(e) {
+
+        e.preventDefault();
+
+        let Email = document.querySelector('#email').value
+        let Password = document.querySelector('#password').value
+
+        const data = {
+            email: Email,
+            password: Password
+        }
+
+        console.log(JSON.stringify(data))
+
+        fetch('/info', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(token => {
+            console.log('Success:', token.token);
+            fetch('/api/people', {
+                method: 'GET',
+                headers: {
+                'Content-Type': 'application/json',
+                'Authorization': token.token
+            }
+            })
+            .then(function(response) {
+            return response.text()
+            })
+            .then(function(html) {
+            document.body.innerHTML = html  
+        })
+        .catch(function(err) {  
+            console.log('Failed to fetch page: ', err);  
+    });
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+    }
+
+
+
+
+    

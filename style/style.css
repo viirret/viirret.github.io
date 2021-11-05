@@ -1,0 +1,200 @@
+.hidden{
+    display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+.red {
+  background-color: #200000   !important;
+}
+
+.black {
+  background-color: #0B0A07;
+}
+
+/*Basics*/
+main{
+  position: relative;
+  margin: 0;
+  width: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    position: relative;
+    margin: 0;
+    width: auto;
+    height: auto;
+    background-color: #1B1B3A;
+    overflow: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    overflow: hidden;  /*scroll lock desktop*/
+    height: 100%;
+}
+
+.containerswitch {
+    position: absolute;
+    right: 30px;
+}
+
+/*Info page*/
+#infoh1 {
+ text-align: center;
+ color:	#8B0000
+}
+  
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+.infolink {
+  display: block;
+  text-align: center;
+  margin: 0.5em;
+  font-size: 18px;
+}
+   
+a:hover {
+  color:#88D18A
+}
+
+a {
+  color:#8B0000
+}
+
+* {
+  box-sizing: border-box;
+}
+  
+html, body {
+    margin: 0;
+}
+
+.nav-item{
+    color:#FB3640;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.nav-item:hover{
+    color:#88D18A;
+}
+
+/*The night mode switch*/
+.switch input {
+    position: absolute;
+    opacity: 0;
+}
+
+  
+.switch {
+  display: inline-block;
+  font-size: 20px;
+  height: 1em;
+  width: 2em;
+  background: #FB3640;
+  border-radius: 1em;
+}
+  
+.switch div {
+  height: 1em;
+  width: 1em;
+  border-radius: 1em;
+  background: #FFF;
+  box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+  
+.switch input:checked + div {
+  -webkit-transform: translate3d(100%, 0, 0);
+       -moz-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+          background: black;
+            
+}
+
+
+  /*Niilo22 kello*/
+
+#clock {
+  margin: 20px auto;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  color: black;
+  font-size: 34px;
+}
+
+#clockarticle {
+  text-align: center;
+}
+
+/* Whack-a-mole peli */
+.hole{
+  
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+#score{
+  text-align: center;
+}
+
+.game{
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.mole{
+  background: url(/images/tattiniilo22.jpg) bottom center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+.hole.peek .mole{
+  top: 0;
+}
+#lyoniiloa{
+  text-align: center;
+  font-size: 1.8em;
+}
+
+#startbutton{
+  transform: translate(9em, -3em);
+  font-size: 1.4em;
+}
+
+#score{
+  font-size: 1.5em;
+}
