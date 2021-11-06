@@ -19,10 +19,23 @@ main{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-  }
+}
 
 /*Info page*/
 #infoarticle{
   text-align: center;
+}
+
+
+.row {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagecolumn {
+  padding-left: 10px;
+  display: inline-block;
 }
   

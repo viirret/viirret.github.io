@@ -1,13 +1,3 @@
-/* Basic Styles */
-* {
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    margin: 0;
-  }
-
-
   /* Toggle Functionality */
   #toggle {
     display: none;
@@ -187,22 +177,11 @@
 
 
 
-  /*Niilo22 kello*/
+  /*clock.js*/
   #clockarticle h1 {
     padding-top: 3em;
   }
 
-  /*Calculator*/
-  #screen{
-    margin-top: 7em;
-    height: 3em;
-    font-size: 5vw;
-  }
 
-  #fifthline button{
-    transform: translate(3em);
-  }
+.row { display:none; }
   
-  #firstline button{
-    transform: translate(6em);
-  }
