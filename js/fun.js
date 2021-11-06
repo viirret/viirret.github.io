@@ -47,15 +47,8 @@ export const darkmode = () => {
 
 
 // these two functions handle the changing colors in the text of the darkmode
-// kinda bad code but it works
 export const checkall = () => {
-    const front = document.querySelector('#maintext')
-    const one = document.querySelector('#info1')
-    const two = document.querySelector('#info2')
-    const three = document.querySelector('#info3')
-    const four = document.querySelector('#info4')
-
-    let arr = [front, one, two, three, four]
+    let arr = document.getElementsByClassName('switcher')
     for(let i = 0; i < arr.length; i++)
     {
         if(arr[i] != null)

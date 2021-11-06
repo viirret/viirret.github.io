@@ -1,23 +1,44 @@
-.hidden{
-    display: none;
+/* 
+          CSS USED IN SCRIPTS
+*/
+
+.hidden { display: none; }
+
+/* changing colors */
+.mytextN { color: #8B0000 }
+
+.mytextY { color: #88D18A }
+
+.red { background-color: #200000   !important; }
+
+.black { background-color: #0B0A07; }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+.link {
+  display: block;
+  text-align: center;
+  margin: 0.5em; 
+  font-size: 18px;
 }
 
-ul {
-  list-style-type: none;
+.switcher {
+  display: block;
+  text-align: center;
 }
 
 
 
-.red {
-  background-color: #200000   !important;
-}
 
-.black {
-  background-color: #0B0A07;
-}
+/* 
+          STATIC CSS
+*/
 
-/*Basics*/
-main{
+main {
   position: relative;
   margin: 0;
   width: 100vh;
@@ -26,6 +47,9 @@ main{
   font-family: 'Roboto', sans-serif;
 }
 
+ul { list-style-type: none; }
+
+/* Container in header */
 #container {
     position: relative;
     margin: 0;
@@ -40,64 +64,23 @@ body {
     overflow: hidden;  /*scroll lock desktop*/
     height: 100%;
 }
+* { box-sizing: border-box; }
 
+  
+html, body { margin: 0; }
+
+
+
+/* the night mode switch*/
 .containerswitch {
     position: absolute;
     right: 30px;
 }
-
-/*Info page*/
-#infoh1 {
- text-align: center;
- color:	#8B0000
-}
-  
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-  
-.infolink {
-  display: block;
-  text-align: center;
-  margin: 0.5em;
-  font-size: 18px;
-}
-   
-a:hover {
-  color:#88D18A
-}
-
-a {
-  color:#8B0000
-}
-
-* {
-  box-sizing: border-box;
-}
-  
-html, body {
-    margin: 0;
-}
-
-.nav-item{
-    color:#FB3640;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-}
-
-.nav-item:hover{
-    color:#88D18A;
-}
-
-/*The night mode switch*/
 .switch input {
     position: absolute;
     opacity: 0;
 }
 
-  
 .switch {
   display: inline-block;
   font-size: 20px;
@@ -126,9 +109,25 @@ html, body {
             
 }
 
+.nav-item{
+    color:#FB3640;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
 
-  /*Niilo22 kello*/
+.nav-item:hover{
+    color:#88D18A;
+}
 
+/* link styles */
+a:hover { color:#88D18A }
+
+a { color:#8B0000 }
+
+
+
+
+/* clock.js */
 #clock {
   margin: 20px auto;
   padding: 0;
@@ -143,9 +142,8 @@ html, body {
   text-align: center;
 }
 
-/* Whack-a-mole peli */
+/* whack-a-mole.js */
 .hole{
-  
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;

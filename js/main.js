@@ -1,6 +1,6 @@
 'use strict'
 
-import { mobileCheck, listen, createArticle, darkmode, textmodecheck  } from './fun.js';
+import { mobileCheck, listen, createArticle, darkmode, textmodecheck, checkall  } from './fun.js';
 import { $, make, makeIMG, makeTEXT, LINK, linkIMG} from './dom.js';
 import Proj from './proj.js';
 
@@ -19,6 +19,7 @@ const front = () => {
 
     const h1 = make('h1')
     h1.id = 'maintext';
+    h1.classList.add('switcher')
 
     const typeWriter = () => {
         if (i < txt.length) {
@@ -38,7 +39,7 @@ const front = () => {
     
     // GIF COPIED FROM:
     // https://tenor.com/view/beavis-computer-shitposting-gif-7431307
-    makeIMG('/images/coding.gif', 'beavis-computer', article, 'maingif');
+    makeIMG('/images/coding.gif', 'beavis-computer', article, 'center');
 
     const row = make('div');
     row.classList.add('row')
@@ -63,8 +64,8 @@ const myworks = () => {
     new Proj('Osu Niiloon!', 'Osu Niiloon peli, JavaScript/CSS', ul, '/js/projects/whack-a-mole.js')
     new Proj('Kello', 'Niilo22 kertoo kellon', ul, '/js/projects/clock.js')
 
-    LINK('/EFTDweb/index.html', 'Escape From The Dark, C#, (ryhmätyö)', ul)
-    makeIMG('/images/EFTDgameplay2.png', 'Escape From The Dark -gameplay', ul, 'center');
+    //LINK('/EFTDweb/index.html', 'Escape From The Dark, C#, (ryhmätyö)', ul)
+    //makeIMG('/images/EFTDgameplay2.png', 'Escape From The Dark -gameplay', ul, 'center');
 
     article.appendChild(ul)
 }
@@ -72,16 +73,29 @@ const myworks = () => {
 // html for the info page
 const info = () => {
     const article = createArticle()
-    makeTEXT('h1', 'Hei, nimeni on Valtteri', article, 'info1');
-    makeTEXT('h3', 'Olen tietotekniikan opiskelija Espoosta', article, 'info2');
-    makeTEXT('h3', 'Lempikieliäni ovat C++ ja JavaScript', article, 'info3');
-    makeTEXT('h3', 'Löydät minut allaolevista linkeistä', article, 'info4');
+    makeTEXT('h1', 'Hei, nimeni on Valtteri', article, 'switcher');
+    makeTEXT('h3', 'Olen tietotekniikan opiskelija Espoosta', article, 'switcher');
+    makeTEXT('h3', 'Lempikieliäni ovat C++ ja JavaScript', article, 'switcher');
+    makeTEXT('h3', 'Löydät minut allaolevista linkeistä', article, 'switcher');
     
     makeIMG('//users.metropolia.fi/~valttvii/pictures/kuva-valtteri.muokattu.jpg', 'Valtteri', article, 'center');
     LINK('mailto:viirretvaltteri@gmail.com', 'viirretvaltteri@gmail.com', article);
     LINK('https://github.com/valtteriviirret', 'github.com/valtteriviirret', article);
     LINK('https://www.instagram.com/valtteriviirret/', 'instagram.com/valtteriviirret', article);
 
+    remove_hash_from_url()
+}
+
+function remove_hash_from_url() {
+    var uri = window.location.toString();
+
+    if (uri.indexOf("#") > 0) {
+        var clean_uri = uri.substring(0,
+                        uri.indexOf("#"));
+
+        window.history.replaceState({},
+                document.title, clean_uri);
+    }
 }
 
 listen('nightswitch', darkmode)
@@ -92,5 +106,7 @@ listen('info', info)
 
 
 front()
+
+ethereum.autoRefreshOnNetworkChange = false
                 
   

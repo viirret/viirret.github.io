@@ -23,7 +23,7 @@ export default class Proj {
         const li = make('li')
         const link = make('a')
 
-        link.classList.add('infolink')
+        link.classList.add('link')
         
         link.href = "about:blank"
         link.target = "_blank"

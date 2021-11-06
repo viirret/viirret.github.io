@@ -24,11 +24,11 @@ export const makeIMG = (src, alt, append, myClass) => {
 	return img
 }
 
-export const makeTEXT = (type, innerHTML, append, id) => {
+export const makeTEXT = (type, innerHTML, append, myClass) => {
 	const text = make(type);
 	text.innerHTML = innerHTML;
-	if(id){
-		text.id = id;
+	if(myClass){
+		text.classList.add(myClass)
 	}
 	textmodecheck(text)
 	append.appendChild(text);
@@ -40,7 +40,7 @@ export const LINK = (href, innerHTML, append) => {
     const tag = make('a');
     tag.href = href
     tag.innerHTML = innerHTML
-    tag.classList.add('infolink');
+    tag.classList.add('link');
     append.appendChild(tag)
 }
 
