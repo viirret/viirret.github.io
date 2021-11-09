@@ -2,7 +2,6 @@
   #toggle {
     display: none;
   }
-
   
   #toggle:checked ~ .toggle-container .button-toggle {
     box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
@@ -175,13 +174,9 @@
     top: 50px;
 }
 
-
-
   /*clock.js*/
-  #clockarticle h1 {
-    padding-top: 3em;
-  }
+#clockarticle h1 { padding-top: 3em; }
 
-
+/* pictures off */
 .row { display:none; }
   

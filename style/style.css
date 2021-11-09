@@ -31,9 +31,6 @@
   text-align: center;
 }
 
-
-
-
 /* 
           STATIC CSS
 */
@@ -41,7 +38,7 @@
 main {
   position: relative;
   margin: 0;
-  width: 100vh;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
@@ -64,11 +61,10 @@ body {
     overflow: hidden;  /*scroll lock desktop*/
     height: 100%;
 }
-* { box-sizing: border-box; }
 
+* { box-sizing: border-box; }
   
 html, body { margin: 0; }
-
 
 
 /* the night mode switch*/
@@ -161,6 +157,7 @@ a { color:#8B0000 }
 
 #score{
   text-align: center;
+  font-size: 1.5em;
 }
 
 .game{
@@ -191,8 +188,4 @@ a { color:#8B0000 }
 #startbutton{
   transform: translate(9em, -3em);
   font-size: 1.4em;
-}
-
-#score{
-  font-size: 1.5em;
 }
