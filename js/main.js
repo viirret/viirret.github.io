@@ -61,11 +61,13 @@ const myworks = () => {
     const ul = document.createElement('ul')
     const article = createArticle()
 
-    new Proj('Osu Niiloon!', 'Osu Niiloon peli, JavaScript/CSS', ul, '/js/projects/whack-a-mole.js')
-    new Proj('Kello', 'Niilo22 kertoo kellon', ul, '/js/projects/clock.js')
-
     LINK('https://users.metropolia.fi/~valttvii/pelikehitys/game/', 'Escape From The Dark, C#, (ryhmätyö)', ul)
     makeIMG('/images/EFTDgameplay2.png', 'Escape From The Dark -gameplay', ul, 'center');
+    
+    new Proj('Osu Niiloon!', 'Osu Niiloon peli, JavaScript/CSS', ul, '/js/projects/whack-a-mole.js')
+    new Proj('Kello', 'Niilo22 kertoo kellon', ul, '/js/projects/clock.js')
+    new Proj('Stopwatch', 'Stopwatch', ul, '/js/projects/stopwatch.js')
+
 
     article.appendChild(ul)
 }

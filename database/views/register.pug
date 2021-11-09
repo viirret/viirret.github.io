@@ -3,6 +3,7 @@ doctype html
 html
     head
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous")
+        script(src="./register.js") 
         title Register
     body
         h1 Register to my website!
@@ -31,59 +32,4 @@ html
                 input(type="text", name="question", class="form-control" value="" id="question")
             div
                 input(type="submit", value="Submit" id="submitter").btn.btn-primary
-
-script.
-
-    const formRegister = document.querySelector('#form-register')
-    const submitter = document.querySelector('#submitter')
-
-    submitter.addEventListener('click', myRequest)
-
-    function myRequest(e) {
-        e.preventDefault();
-        
-        let sec = document.querySelector('#question').value
-
-        if(sec == !{testObj}.ans)
-        {
-
-            // defining input values
-            let Firstname = document.querySelector('#firstname').value
-            let Lastname = document.querySelector('#lastname').value
-            let Email = document.querySelector('#email').value
-            let Phone = document.querySelector('#phone').value
-            let Company = document.querySelector('#company').value
-            let Msg = document.querySelector('#msg').value
-
-            const data = {
-                firstname: Firstname,
-                lastname: Lastname,
-                email: Email,
-                phone: Phone,
-                company: Company,
-                msg: Msg
-            }
-
-            console.log(JSON.stringify(data))
-
-            fetch('/api/people', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            })
-            .then(res => res.text())
-            
-            .then(function(html) {
-                document.body.innerHTML = html  
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-        }
-        else
-        {
-            console.log('Not correct!')
-        }
-    }
+    
