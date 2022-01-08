@@ -108,7 +108,4 @@ listen('info', info)
 
 
 front()
-
-ethereum.autoRefreshOnNetworkChange = false
-                
   
