@@ -82,7 +82,7 @@ const info = () => {
     
     makeIMG('//users.metropolia.fi/~valttvii/pictures/kuva-valtteri.muokattu.jpg', 'Valtteri', article, 'center');
     LINK('mailto:viirretvaltteri@gmail.com', 'viirretvaltteri@gmail.com', article);
-    LINK('https://github.com/valtteriviirret', 'github.com/valtteriviirret', article);
+    LINK('https://github.com/viirret', 'github.com/viirret', article);
     LINK('https://www.instagram.com/valtteriviirret/', 'instagram.com/valtteriviirret', article);
 
     remove_hash_from_url()
@@ -108,4 +108,4 @@ listen('info', info)
 
 
 front()
-  
+ 
