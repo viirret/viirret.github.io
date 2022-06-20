@@ -1,2 +1,2 @@
 # Personal website
-Live at [valtteriviirret.github.io](https://valtteriviirret.github.io/)
+Live at [viirret.github.io](https://viirret.github.io/)
