@@ -1,0 +1,28 @@
+
+PICTURE
+
+About me:
+Espoo, Finland
+Metropolia UAS
+
+Skills
+C++, C#, Kotlin, JavaScript
+
+Links
+github
+LinkedIn
+email
+
+Some of my best works
+clix
+Object oriented 2D framework based on Raylib
+
+Colorify
+Program to color images with RGB decimal code
+
+BomberMan
+Bomberman game made with Unity
+
+Repos using these technologies and more on my {github}
+Linux, Git, Unity, SDL2, OpenGL, Node.js, WebSocket, SQL
+
