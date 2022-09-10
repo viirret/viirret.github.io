@@ -1,7 +1,7 @@
 
 .me {
-	width: 25%;
-	height: 60%;
+	width: 200px;
+	height: 200px;
 }
 
 .card {
@@ -11,9 +11,20 @@
 	margin: 0 auto;
 	float: none;
 	margin-bottom: 10px;
+	background-color: #E5E9EC;
+	margin-top: 20px;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+body {
+	background-color: #66A182;
+}
+
+.card-text
+{
+	color: #160C28;
 }
