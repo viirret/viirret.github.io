@@ -21,10 +21,19 @@
 }
 
 body {
-	background-color: #66A182;
+	background-color: #092336;
 }
 
 .card-text
 {
 	color: #160C28;
+}
+a {
+	text-decoration: none;
+	border-bottom: 1px dashed #07364280;
+	color:black;
+}
+
+a:hover {
+	color: royalblue;
 }
